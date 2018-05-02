@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexBasis: '80%',
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    flexGrow: 1
   }
 });
