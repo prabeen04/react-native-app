@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import Header from './components/header/header';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -24,14 +25,15 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.header}>
+      <Header/>
+        {/* <View style={styles.header}>
           <Text style={[styles.welcome, styles.whiteColor]}>
             Header Area
         </Text>
-        </View>
+        </View> */}
         <View style={styles.body}>
           <Text style={styles.welcome}>
-            Congratulation Prabeen...
+            Congratulation...
         </Text>
         </View>
         <View style={styles.footer}>
