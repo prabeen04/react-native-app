@@ -15,16 +15,18 @@ class Post extends Component {
         .then(response => response.json())
         .then(data => {
             console.log(data)
-            posts = data
+            this.setState({
+                posts: data
+            })
         })
     }
   render() {
     return (
       <View>
         <Text> Post Component </Text>
-        
+        <Text> Post Component </Text>
         {this.state.posts.map(post=>{
-            console.debug(post)
+            console.log(post)
             return <Text>{ post.title} </Text>
         })}
       </View>
