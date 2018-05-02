@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
 const baseUrl = 'https://prabeen-restapi.herokuapp.com/api/posts';
 
 class Post extends Component {
@@ -23,15 +23,20 @@ class Post extends Component {
   render() {
     return (
       <View>
-        <Text> Post Component </Text>
-        <Text> Post Component </Text>
         {this.state.posts.map(post=>{
             console.log(post)
-            return <Text>{ post.title} </Text>
+            return <Text style={styles.postCard}>{ post.title} </Text>
         })}
       </View>
     )
   }
 }
 
+const styles = StyleSheet.create({
+    postCard:{
+        color: 'tomato',
+        fontWeight: 'bold',
+        fontSize: 30
+    }
+})
 export default Post;
