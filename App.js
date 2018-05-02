@@ -24,15 +24,21 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+        <View style={styles.header}>
+          <Text style={[styles.welcome, styles.whiteColor]}>
+            Header Area
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
+        </View>
+        <View style={styles.body}>
+          <Text style={styles.welcome}>
+            Congratulation Prabeen...
         </Text>
-        <Text style={styles.instructions}>
-          {instructions}
+        </View>
+        <View style={styles.footer}>
+          <Text style={styles.welcome}>
+            Footer
         </Text>
+        </View>
       </View>
     );
   }
@@ -41,18 +47,27 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'flex-end',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  whiteColor: {
+    color: '#FFF'
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  header:{
+    backgroundColor: '#333',
+    flex: 1,
+    flexBasis: '10%'
   },
+  body:{
+    backgroundColor: '#f4f4f4',
+    flex: 1,
+    flexBasis: '80%'
+  },
+  footer:{
+    backgroundColor: '#333',
+    flex: 1,
+    flexBasis: '10%'
+  },
+  welcome:{
+  }
 });
