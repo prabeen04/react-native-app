@@ -27,16 +27,12 @@ class Post extends Component {
         }
         return (
             <View>
-                <ListItem
-                        title={'post.title'}
-                        subtitle={'post.author'}
-                    />
-                {this.state.posts.map(post => (
-                    <ListItem
-                        key={post._id}
-                        title={post.title}
-                    />
-                ))}
+                {this.state.posts.map(post => {
+                    return (
+                        <View key={post._id} style={styles.postCard}>
+                            <Text style={styles.postList}>{post.title} </Text>
+                        </View>)
+                })}
             </View>
         )
     }
