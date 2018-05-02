@@ -4,8 +4,8 @@ import { Text, View, StyleSheet } from 'react-native'
 class Header extends Component {
   render() {
     return (
-      <View>
-        <Text> Header Component </Text>
+      <View style={styles.headerBackground}>
+        <Text style={styles.headerColor}> Header Component </Text>
       </View>
     )
   }
@@ -13,10 +13,13 @@ class Header extends Component {
 
 const styles = StyleSheet.create({
     headerBackground: {
-        backgroundColor: '#333'
+        backgroundColor: '#e51948',
+        padding: 20
     },
     headerColor: {
-        color: '#fff'
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: 20,
     }
 })
 export default Header;

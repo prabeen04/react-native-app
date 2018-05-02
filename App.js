@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native';
 import Header from './components/header/header';
+import Footer from './components/footer/footer';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -26,21 +27,12 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
       <Header/>
-        {/* <View style={styles.header}>
-          <Text style={[styles.welcome, styles.whiteColor]}>
-            Header Area
-        </Text>
-        </View> */}
         <View style={styles.body}>
-          <Text style={styles.welcome}>
+          <Text>
             Congratulation...
         </Text>
         </View>
-        <View style={styles.footer}>
-          <Text style={styles.welcome}>
-            Footer
-        </Text>
-        </View>
+        <Footer/>
       </View>
     );
   }
@@ -55,21 +47,9 @@ const styles = StyleSheet.create({
   whiteColor: {
     color: '#FFF'
   },
-  header:{
-    backgroundColor: '#333',
-    flex: 1,
-    flexBasis: '10%'
-  },
   body:{
     backgroundColor: '#f4f4f4',
     flex: 1,
     flexBasis: '80%'
-  },
-  footer:{
-    backgroundColor: '#333',
-    flex: 1,
-    flexBasis: '10%'
-  },
-  welcome:{
   }
 });
