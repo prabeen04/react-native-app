@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+import Post from './components/post/post';
 import { Avatar, Button } from 'react-native-elements'
 
 const instructions = Platform.select({
@@ -30,7 +31,7 @@ export default class App extends Component<Props> {
       <View style={styles.container}>
         <Header />
         <View style={styles.body}>
-          <Image
+          {/* <Image
             style={{ width: 50, height: 50 }}
             source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
           />
@@ -45,7 +46,8 @@ export default class App extends Component<Props> {
             activeOpacity={0.7}
           />
           <Button
-            title='BUTTON' />
+            title='BUTTON' /> */}
+            <Post/>
         </View>
         <Footer />
       </View>
