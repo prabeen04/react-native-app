@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <View style={styles.headerBackground}>
-        <Text style={styles.headerColor}> Header Component </Text>
+        <Text style={styles.headerColor}> Gosimon </Text>
       </View>
     )
   }
@@ -13,13 +13,16 @@ class Header extends Component {
 
 const styles = StyleSheet.create({
     headerBackground: {
-        backgroundColor: '#e51948',
-        padding: 20
+        backgroundColor: '#6423ce',
+        padding: 20,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     headerColor: {
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: 25,
     }
 })
 export default Header;

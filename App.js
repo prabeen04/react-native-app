@@ -9,10 +9,12 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+import { Avatar, Button } from 'react-native-elements'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -26,13 +28,26 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-      <Header/>
+        <Header />
         <View style={styles.body}>
+          <Image
+            style={{ width: 50, height: 50 }}
+            source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
+          />
           <Text>
             Congratulation...
         </Text>
+          <Avatar
+            small
+            rounded
+            source={{ uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg" }}
+            onPress={() => console.log("Works!")}
+            activeOpacity={0.7}
+          />
+          <Button
+            title='BUTTON' />
         </View>
-        <Footer/>
+        <Footer />
       </View>
     );
   }
@@ -47,9 +62,12 @@ const styles = StyleSheet.create({
   whiteColor: {
     color: '#FFF'
   },
-  body:{
+  body: {
     backgroundColor: '#f4f4f4',
     flex: 1,
-    flexBasis: '80%'
+    flexBasis: '80%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });

@@ -6,7 +6,7 @@ class Footer extends Component {
         return (
 
             <View style={styles.footerBackground}>
-                <Text style={styles.footerColor}> Footer Component </Text>
+                <Text style={styles.footerColor}> Footer</Text>
             </View>
         )
     }
@@ -14,7 +14,7 @@ class Footer extends Component {
 
 const styles = StyleSheet.create({
     footerBackground: {
-        backgroundColor: '#e51948',
+        backgroundColor: '#6423ce',
         padding: 20
     },
     footerColor: {
