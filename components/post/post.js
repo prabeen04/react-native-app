@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import React, { Component } from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import { ListItem } from 'react-native-elements';
 const baseUrl = 'https://prabeen-restapi.herokuapp.com/api/posts';
 
 class Post extends Component {
@@ -21,11 +22,14 @@ class Post extends Component {
         })
     }
   render() {
+    if(this.state.posts.length === 0){
+        return (<View><Text>Loading...</Text></View>);
+    }
     return (
       <View>
         {this.state.posts.map(post=>{
             console.log(post)
-            return <Text style={styles.postCard}>{ post.title} </Text>
+            return <Text key={post._id} style={styles.postCard}>{ post.title} </Text>
         })}
       </View>
     )
